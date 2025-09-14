@@ -259,12 +259,12 @@ setInterval(fetchBNBPrice, 120000);
       </div>
         
         <div class="spot-bottom-buttons">
-        <button id="receive-button" class="modal-button">Deposit</button>
-        <button id="send-button" class="modal-button">Withdrawal</button>
-        <button id="convert-button" class="modal-button">Convert</button> 
+        <div id="receive-button" class="modal-button">Deposit</div> 
+        <div id="send-button" class="modal-button">Withdrawal</div> 
+        <div id="convert-button" class="modal-button">Convert</div>   
         </div> 
-      </div>  
-
+      </div>    
+ 
       <!-- Receive page content -->  
       <div class="modal-receive" style="display: none;">
         <div class="receive-title">Deposit</div>
@@ -352,9 +352,9 @@ setInterval(fetchBNBPrice, 120000);
      
   
     
-    <div class="sans-row"> 
-      <div class="sans-column">
-        <div class="">Network fee</div>        
+    <div class="sans-row">  
+      <div class="sans-column"> 
+        <div class="">Network fee</div>       
         <div class="">Credited amount</div>  
       </div> 
       <div class="sans-column-b">
@@ -363,7 +363,7 @@ setInterval(fetchBNBPrice, 120000);
       </div>
     </div>
     
-      <button id="sendpage-withdraw" class="sendpage-withdraw" disabled>Withdraw</button>
+      <button id="sendpage-withdraw" class="sendpage-withdraw">Withdraw</button>
   </div>  
 </div>
     
@@ -491,7 +491,7 @@ setInterval(fetchBNBPrice, 120000);
         
             <button class="p-close-button-z" onclick="document.querySelector('#withdraw-confirm-modal').style.display='none';document.querySelector('#send-modal').style.display='block';"><span class="material-symbols-outlined"><img src="https://cdn-icons-png.flaticon.com/128/10728/10728756.png" alt="Back"></span></button>
           
-       <!--   <div class="withdraw-warning">Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong</div>
+         <div class="withdraw-warning">Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong</div>
           <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" alt="BTC" class="withdraw-icon">  
           <div class="withdrawal-processing">Withdrawal Processing</div> 
           <div class="withdrawal-p-amt">1,000 USDC</div> 
@@ -499,7 +499,7 @@ setInterval(fetchBNBPrice, 120000);
           <span class="withdrawal-estim">You will receive a notification once withdrawal
           is completed.</span>
           <span class="withdrawal-estim">View history for latest updates</span> 
-          <div class="with-done" onclick="document.querySelector('#withdraw-confirm-modal').style.display='none';document.querySelector('#send-modal').style.display='block';">Done</div> -->
+          <div class="with-done" onclick="document.querySelector('#withdraw-confirm-modal').style.display='none';document.querySelector('#send-modal').style.display='block';">Done</div> 
     
         </div>
         </div>
