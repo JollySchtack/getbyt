@@ -739,13 +739,13 @@ setInterval(fetchBNBPrice, 120000);
 
       // Update convertedDiv with calculated value
       if (!isNaN(inputValue)) {
-        convertedDiv.textContent = (inputValue * 0.12).toFixed(2);
+        convertedDiv.textContent = (inputValue * 0.40).toFixed(2);
       } else {
         convertedDiv.textContent = '';
       }
       
       if (!isNaN(inputValue)) {
-        convertedUsdDiv.textContent = (inputValue * 0.12).toFixed(2);
+        convertedUsdDiv.textContent = (inputValue * 0.40).toFixed(2);
       } else {
         convertedUsdDiv.textContent = '';
       }
@@ -777,7 +777,7 @@ setInterval(fetchBNBPrice, 120000);
       <div class="accept-box-details-b">   
       <div class="accept-box-right-conv"><div class="conv-box-win"></div>&nbspAIX</div>  
       <div class="accept-box-right-conv"><div class="conv-box-conv"></div>&nbspUSDC</div> 
-      <div class="accept-box-right-conv">0.12 USDC = 1 AIX </div> 
+      <div class="accept-box-right-conv">0.40 USDC = 1 AIX </div> 
       <div class="accept-box-right-conv">0.047 ETH</div> 
       </div>  
         </div>  
@@ -803,7 +803,7 @@ setInterval(fetchBNBPrice, 120000);
 
       // Update convertedDiv with calculated value
       if (!isNaN(inputValueConv)) {
-        convertedDivConv.textContent = (inputValueConv * 0.12).toFixed(2);
+        convertedDivConv.textContent = (inputValueConv * 0.40).toFixed(2);
       } else {
         convertedDivConv.textContent = '';
       }
@@ -1512,4 +1512,5 @@ setInterval(fetchPiPrice, 120000);
   
 </body>
 </html>
+
 
