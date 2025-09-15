@@ -3910,7 +3910,7 @@ footer {
 .con-aix-done{
   width: 95%;
   margin-left: 2.5%;
-  position: absolute;
+  position: fixed;
   bottom: 5%;
   left: 0%;
   background-color: #03AAC7;
