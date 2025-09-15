@@ -17,14 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0.003, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'Ethereum' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 4450, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0.16, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'Ethereum' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
      { name: 'AIX', abbr: 'AIX', logoUrl: 'https://aixwallets.com/assets/img/aixc.svg', id: 'aix-wallet', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rsZz9P9t5uFjecedjnKgZwP3WUE1s4HTHR', network: 'XRP' },
     { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
     { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQA5y47lv9HJQcoWK3W0h7SCEkcQhgbiWJvCCb4xhEcUh815', network: 'TON' },
+     { name: 'SATU', abbr: 'SATU', logoUrl: 'https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75', id: 'official-trump', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'TRC20' },
     { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
     { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1qe0h2ngpqk6aplk8dlj5ze0n8kkseh9tm3cc6m4', network: 'Litecoin' },
     { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q9msnqj5kgrh5hvnzmc9sdhqc0crvg68j3nvwjuahrv9ldndfpf5j2segqrru23u92dnnq9e9q28ct7djpu06u0vav7s6l4c3t', network: 'Cardano' },
@@ -2495,6 +2496,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const conDisB = document.getElementById("con-dis-b");
     const conDisC = document.getElementById("con-dis-c");
     const conDisD = document.getElementById("con-dis-d");
+    const aBoxFees = document.getElementById("a-box-fees");
     const ExpFromIcon = document.querySelector(".not-icon-a");
     const ExpCurOne = document.querySelector(".accept-box-trans");
     const ExpressAvailMini = document.querySelector(".express-avail-mini");
@@ -2517,6 +2519,7 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisB.textContent = "AIX Wallet";
             conDisC.textContent = "AIX";
             conDisD.textContent = "18";
+            aBoxFees.textContent = "0.047 ETH";
             ExpCurOne.textContent = "AIX";
             ExpFromIcon.src = "https://aixwallets.com/assets/img/aixc.svg";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
@@ -2532,6 +2535,7 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisB.textContent = "SATU";
             conDisC.textContent = "SATU";
             conDisD.textContent = "18";
+            aBoxFees.textContent = "0.15 ETH";
             ExpCurOne.textContent = "SATU";
             ExpFromIcon.src = "https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
@@ -2547,6 +2551,7 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisB.textContent = "--";
             conDisC.textContent = "--";
             conDisD.textContent = "--";
+            aBoxFees.textContent = "0.0002 ETH";
             ExpCurOne.textContent = "AIX";
             ExpFromIcon.src = "https://aixwallets.com/assets/img/aixc.svg";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
@@ -2554,8 +2559,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
  
-
-
 
 
 
