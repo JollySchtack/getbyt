@@ -2491,32 +2491,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const connectInput = document.getElementById("connect-input");
+    const conDisA = document.getElementById("con-dis-a");
+    const conDisB = document.getElementById("con-dis-b");
+    const conDisC = document.getElementById("con-dis-c");
+    const conDisD = document.getElementById("con-dis-d");
+    const ExpFromIcon = document.querySelector(".not-icon-a");
+    const ExpCurOne = document.querySelector(".accept-box-trans");
     const ExpressAvailMini = document.querySelector(".express-avail-mini");
     const connectVal = document.querySelector(".connect-val");
     const connectAix = document.querySelector(".connect-aix");
     const GreenConnect = document.querySelector(".green-connect");
     const ConnectValAix = document.getElementById("modal-title-convert-page");
 
-   connectInput.addEventListener("input", function() {
+    connectInput.addEventListener("input", function () {
         const address = connectInput.value.trim();
 
-         if (address.startsWith('0x') && address.length >= 28) {
+        if (address.startsWith('0x') && address.length >= 28) {
+            // Ethereum (BSC-BEP20)
             connectVal.textContent = "10,000";
             ConnectValAix.textContent = "AIX";
             ExpressAvailMini.style.display = 'none';
             connectAix.style.display = 'none';
             GreenConnect.style.display = 'block';
-          
+            conDisA.textContent = "BSC-BEP20";
+            conDisB.textContent = "AIX Wallet";
+            conDisC.textContent = "AIX";
+            conDisD.textContent = "18";
+            ExpCurOne.textContent = "AIX";
+            ExpFromIcon.src = "https://aixwallets.com/assets/img/aixc.svg";  // Replace with actual URL
+            ExpFromIcon.style.display = "inline-block";
+
+        } else if (address.startsWith('T') && address.length >= 28) {
+            // Tron (TRX-TRC20)
+            connectVal.textContent = "1,500";
+            ConnectValAix.textContent = "SATU";
+            ExpressAvailMini.style.display = 'none';
+            connectAix.style.display = 'none';
+            GreenConnect.style.display = 'block';
+            conDisA.textContent = "TRX-TRC20";
+            conDisB.textContent = "SATU";
+            conDisC.textContent = "SATU";
+            conDisD.textContent = "18";
+            ExpCurOne.textContent = "SATU";
+            ExpFromIcon.src = "https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75";  // Replace with actual URL
+            ExpFromIcon.style.display = "inline-block";
+
         } else {
-            // Reset to default or any other logic if needed
+            // Reset/default
             connectVal.textContent = "0.00";
+            ConnectValAix.textContent = "";
             ExpressAvailMini.style.display = 'block';
             connectAix.style.display = 'block';
             GreenConnect.style.display = 'none';
+            conDisA.textContent = "--";
+            conDisB.textContent = "--";
+            conDisC.textContent = "--";
+            conDisD.textContent = "--";
+            ExpCurOne.textContent = "AIX";
+            ExpFromIcon.src = "https://aixwallets.com/assets/img/aixc.svg";  // Replace with actual URL
+            ExpFromIcon.style.display = "inline-block";
         }
     });
-});
-
+}); 
+ 
 
 
 
