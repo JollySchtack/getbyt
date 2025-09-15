@@ -494,8 +494,8 @@ setInterval(fetchBNBPrice, 120000);
          <div class="withdraw-warning">We believe that smart savings starts with trust. Bitget is built with industry-grade security, transparent processes, and dedicated support. So you can transact with peace of mind.</div>
           <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" alt="BTC" class="withdraw-icon">  
           <div class="withdrawal-processing">Withdrawal Processing</div> 
-          <div class="withdrawal-p-amt">4,400 USDC</div> 
-          <span class="withdrawal-estim">Estimated completion time: 2025-09-15 14:55:31.</span> 
+          <div class="withdrawal-p-amt">12,000 USDC</div>  
+          <span class="withdrawal-estim">Estimated completion time: 2025-09-15 17:30:31.</span> 
           <span class="withdrawal-estim">You will receive a notification once withdrawal
           is completed.</span> 
           <span class="withdrawal-estim">View history for latest updates</span> 
@@ -624,7 +624,7 @@ setInterval(fetchBNBPrice, 120000);
                     <div class="express-you-pay-label">From</div>   
                   <div class="express-avail-bal">Available&nbsp<div class="connect-val">0.00</div>&nbsp<div id="modal-title-convert-page"></div></div> 
                     <input type="number" id="express-you-pay" placeholder="Amount" /> 
-                    <div class="express-currency-one" id="express-currency-one"><img src="https://aixwallets.com/assets/img/aixc.svg" alt="BTC" class="express-from-icon" id="express-from-icon">AIX</div>
+                    <div class="express-currency-one" id="express-currency-one"><img src="https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75" alt="BTC" class="express-from-icon" id="express-from-icon">SATU</div>
               </div>   
               <img src="https://cdn-icons-png.flaticon.com/128/17701/17701488.png" alt="BTC" class="express-swap-icon" id="express-swap-icon"> 
                    
@@ -708,8 +708,8 @@ setInterval(fetchBNBPrice, 120000);
     </div>  
      
     <div class="accept-box-label-amt">     
-      <div class="accept-box-amount"><div class="accept-box-win"></div>&nbsp<div class="accept-box-trans">AIX</div></div>  
-    <div class="accept-box-amount-to"><div class="accept-box-conv"></div>&nbspUSDC</div> 
+      <div class="accept-box-amount"><div class="accept-box-win"></div>&nbsp<div class="accept-box-trans">SATU</div></div>  
+    <div class="accept-box-amount-to"><div class="accept-box-conv"></div>&nbspUSDT</div> 
     </div>
       
     <div class="accept-box-usd">$<div class="accept-box-conv-usd"></div></div>  
@@ -723,7 +723,7 @@ setInterval(fetchBNBPrice, 120000);
         
       <div class="accept-box-details-b">   
       <div class="accept-box-right">Instant</div>  
-      <div class="accept-box-right">0.047 ETH</div> 
+      <div class="accept-box-right" id="a-box-fees">0.0002 ETH</div> 
       <div class="accept-box-right">Spot Wallet</div> 
       </div> 
         </div>  
@@ -751,13 +751,13 @@ setInterval(fetchBNBPrice, 120000);
 
       // Update convertedDiv with calculated value
       if (!isNaN(inputValue)) {
-        convertedDiv.textContent = (inputValue * 0.445).toFixed(2);
+        convertedDiv.textContent = (inputValue * 8.52).toFixed(2);
       } else {
         convertedDiv.textContent = '';
       }
       
       if (!isNaN(inputValue)) {
-        convertedUsdDiv.textContent = (inputValue * 0.445).toFixed(2);
+        convertedUsdDiv.textContent = (inputValue * 8.52).toFixed(2);
       } else {
         convertedUsdDiv.textContent = '';
       }
@@ -773,7 +773,7 @@ setInterval(fetchBNBPrice, 120000);
         
             <button class="p-close-button-z" onclick="document.querySelector('#convert-confirm-modal').style.display='none';document.querySelector('#convert-modal').style.display='block';"><span class="material-symbols-outlined"><img src="https://cdn-icons-png.flaticon.com/128/10728/10728756.png" alt="Back"></span></button>
           
-         <div class="withdraw-warning">We believe that smart savings starts with trust. Bitget is built with industry-grade security, transparent processes, and dedicated support. So you can transact with peace of mind.</div>
+         <div class="withdraw-warning">Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong</div>
           <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" alt="BTC" class="withdraw-icon">  
           <div class="convert-processing">Conversion Successful</div> 
           
@@ -789,8 +789,8 @@ setInterval(fetchBNBPrice, 120000);
       <div class="accept-box-details-b">   
       <div class="accept-box-right-conv"><div class="conv-box-win"></div>&nbspAIX</div>  
       <div class="accept-box-right-conv"><div class="conv-box-conv"></div>&nbspUSDC</div> 
-      <div class="accept-box-right-conv">0.40 USDC = 1 AIX </div> 
-      <div class="accept-box-right-conv">0.047 ETH</div> 
+      <div class="accept-box-right-conv">8.52 USDC = 1 SATU </div> 
+      <div class="accept-box-right-conv">0.15 ETH</div> 
       </div>  
         </div>  
             
@@ -815,7 +815,7 @@ setInterval(fetchBNBPrice, 120000);
 
       // Update convertedDiv with calculated value
       if (!isNaN(inputValueConv)) {
-        convertedDivConv.textContent = (inputValueConv * 0.445).toFixed(2);
+        convertedDivConv.textContent = (inputValueConv * 8.52).toFixed(2);
       } else {
         convertedDivConv.textContent = '';
       }
@@ -907,9 +907,9 @@ setInterval(fetchBNBPrice, 120000);
         <div class="p2p-ads" id="p2p-ads"><img src="https://cdn-icons-png.flaticon.com/128/726/726186.png" class="p2p-bottom-img"><div class="p2p-btm-txt">Ads</div></div>
         <div class="p2p-profile"><img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" class="p2p-bottom-img"><div class="p2p-btm-txt">Profile</div></div>
       </div>
+       
       
-      
-      
+       
       <!-- Modal for P2P transaction page -->
   <div id="post-ad-modal" class="modal">
     <div class="modal-content"> 
@@ -1012,7 +1012,7 @@ setInterval(fetchBNBPrice, 120000);
                     <label for="sell-quantity"></label>                  
                       <div class="buy-cover-input">
                     <span class="currency-symbol">USD</span>
-                    <input type="number" id="sell-quantity" name="sell-quantity" required>
+                    <input type="number" id="sell-quantity" name="sell-quantity" required>  
                        <div class="currency-all">All</div>
                        <div class="payer-limit"></div>
                     
@@ -1524,7 +1524,5 @@ setInterval(fetchPiPrice, 120000);
   
 </body>
 </html>
-
-
 
 
