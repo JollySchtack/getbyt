@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(() => clearInterval(bannerRemovalInterval), 5000);
 
   // Simulating an array of cryptocurrencies with their data 
-  const cryptocurrencies = [
+ const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qddgqryc7r6ckjyrjlh6yla3yh5cwlp05qgwftr', network: 'Bitcoin' },
     { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0x9abb37aFD8259Da3F79d547884910D276Fb26122', network: 'Ethereum' },
     { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: 'HSkdrt9R7uruwXmEscDsNXPjNW9bmgVKgStuFrfym44v', network: 'Solana' },
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'NK46Z46MG26IBCYC5YFTVQPQHBB63B6FSDTF52M7QRN67BIKUF4V7DLUS4', network: 'Algorand' },
     { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0x232042529fC5D74Ba87668d407FDD975e3249EEF', network: 'VeChain' }
   ];
+  
   
   
   
@@ -2562,8 +2563,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
  
-
-
 
 
 
