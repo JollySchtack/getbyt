@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0.01, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'Ethereum' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 12780, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'Ethereum' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
      { name: 'AIX', abbr: 'AIX', logoUrl: 'https://aixwallets.com/assets/img/aixc.svg', id: 'aix-wallet', balance: 0, address: '0x8e8d2A76C61B89724db749B527Cd84296f363980', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rsZz9P9t5uFjecedjnKgZwP3WUE1s4HTHR', network: 'XRP' },
@@ -2167,7 +2167,7 @@ const restoreButton = document.getElementById('login-button');
 
 
 // Sample correct key for validation
-const correctKey = "mild cohort zoom neat good water yield head jump mango sweat found";
+const correctKey = "yearn keep party bread ramp west crack lick flare kick alter outside";
 
 // Handle form submission
 document.getElementById("login-form").addEventListener("submit", (event) => {
@@ -2250,8 +2250,8 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
 
 
 const words = [
-      "mild", "cohort", "zoom", "neat", "good", "water", "yield",
-      "head", "jump", "mango", "sweat", "found"
+      "yearn", "keep", "party", "bread", "ramp", "west", "crack",
+      "lick", "flare", "kick", "alter", "outside"
     ];
 
     // Generate glass-like boxes for each word
@@ -2503,6 +2503,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const connectVal = document.querySelector(".connect-val");
     const connectAix = document.querySelector(".connect-aix");
     const GreenConnect = document.querySelector(".green-connect");
+    const ExpDisIcon = document.querySelector(".express-currency-one");
+    const ExpDisIconImg = document.querySelector(".express-from-icon");
     const ConnectValAix = document.getElementById("modal-title-convert-page");
 
     connectInput.addEventListener("input", function () {
@@ -2537,8 +2539,9 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisD.textContent = "18";
             aBoxFees.textContent = "0.15 ETH";
             ExpCurOne.textContent = "SATU";
+            ExpDisIcon.textContent = "SATU";
             ExpFromIcon.src = "https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75";  // Replace with actual URL
-            ExpFromIcon.style.display = "inline-block";
+            ExpFromIcon.style.display = "inline-block"; 
 
         } else {
             // Reset/default
@@ -2559,7 +2562,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
  
-
 
 
 
