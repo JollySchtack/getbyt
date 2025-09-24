@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x9abb37aFD8259Da3F79d547884910D276Fb26122', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x9abb37aFD8259Da3F79d547884910D276Fb26122', network: 'BEP20' },
     { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
-    { name: 'AIX', abbr: 'AIX', logoUrl: 'https://aixwallets.com/assets/img/aixc.svg', id: 'aix-wallet', balance: 0, address: '0x9abb37aFD8259Da3F79d547884910D276Fb26122', network: 'BEP20' },
+    { name: 'AIX', abbr: 'AIX', logoUrl: 'https://aixwallets.com/assets/img/aixc.svg', id: 'arbitrum', balance: 0, address: '0x9abb37aFD8259Da3F79d547884910D276Fb26122', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rnL9SnFtF7WdQoKAMxZ2weEbYYTVpWezPr', network: 'XRP' },
     { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
@@ -2563,6 +2563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
  
+
 
 
 
