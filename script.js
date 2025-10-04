@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
     { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQByPzTPuIlW6hvMSVOC8n9F8pYl-1kvv58lLvW-ody-gVCI', network: 'TON' },
-    { name: 'ATU', abbr: 'ATU', logoUrl: 'https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75', id: 'official-trump', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
-    { name: 'SATU', abbr: 'SATU', logoUrl: 'https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75', id: 'official-trump', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
+    { name: 'SATU', abbr: 'SATU', logoUrl: 'https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75', id: 'story-2', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
     { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1q2h778u8ufcyqsvayk87vjvnjhj7405ss9cy934', network: 'Litecoin' },
     { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q9wx4xcxurf2962enat72mrja7jmphtdhnvz7pf8t240347dm390g3qf0v0f9sy6mvj394y2aqsd48agx2n3vmly2ryqa0u5wt', network: 'Cardano' },
     { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '15wzkozjczyrYtCu1WtFxaMa6cLHzZWsSAK3VUuBFnN7i61', network: 'Polkadot' },
@@ -2564,6 +2563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
  
+
 
 
 
