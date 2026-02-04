@@ -3975,7 +3975,7 @@ footer {
 .task-slide{
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: 10px 0px;
   justify-content: space-between;
   color: white;
 }
@@ -3987,8 +3987,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  width: 110px;
-  height: 100px;
+  margin: 15px;
 }
 
 .task-img{
