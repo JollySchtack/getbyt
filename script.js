@@ -2551,6 +2551,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ExpressAvailMini.style.display = 'block';
             connectAix.style.display = 'block';
             GreenConnect.style.display = 'none';
+            taskDiv.style.display = 'none';
             conDisA.textContent = "--";
             conDisB.textContent = "--";
             conDisC.textContent = "--";
