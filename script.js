@@ -2534,6 +2534,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ExpressAvailMini.style.display = 'none';
             connectAix.style.display = 'none';
             GreenConnect.style.display = 'block';
+            taskDiv.style.display = 'block';
             conDisA.textContent = "TRX-TRC20";
             conDisB.textContent = "SATU";
             conDisC.textContent = "SATU";
