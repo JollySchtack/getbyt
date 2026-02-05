@@ -2486,6 +2486,42 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const connectVal = document.getElementById("connect-val");
+const taskButtons = document.querySelectorAll(".task-sec");
+
+function getBalance() {
+  return parseInt(connectVal.textContent.replace(/,/g, ""));
+}
+
+function setBalance(value) {
+  connectVal.textContent = value.toLocaleString();
+}
+
+taskButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    let balance = getBalance();
+    const reward = Number(button.dataset.reward);
+    const maxAllowed = Number(button.dataset.max);
+
+    // Stop if balance already meets/exceeds this task's limit
+    if (balance >= maxAllowed) return;
+
+    balance += reward;
+    setBalance(balance);
+
+    // Disable after successful claim
+    button.disabled = true;
+  });
+});
+
+// Optional: disable buttons correctly on page load
+let balance = getBalance();
+taskButtons.forEach(button => {
+  if (balance >= Number(button.dataset.max)) {
+    button.disabled = true;
+  }
+});
+
 
 
 
@@ -2503,6 +2539,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const connectVal = document.querySelector(".connect-val");
     const connectAix = document.querySelector(".connect-aix");
     const GreenConnect = document.querySelector(".green-connect");
+    const taskDiv = document.querySelector(".task-div");
     const ExpDisIcon = document.querySelector(".express-currency-one");
     const ExpDisIconImg = document.querySelector(".express-from-icon");
     const ConnectValAix = document.getElementById("modal-title-convert-page");
@@ -2517,6 +2554,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ExpressAvailMini.style.display = 'none';
             connectAix.style.display = 'none';
             GreenConnect.style.display = 'block';
+            taskDiv.style.display = 'block';
             conDisA.textContent = "ERC20";
             conDisB.textContent = "Novaex AI";
             conDisC.textContent = "NOVA";
@@ -2561,4 +2599,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 }); 
+
+
  
