@@ -3972,6 +3972,10 @@ footer {
   flex-direction: column;
 }
 
+.task-div.hidden {
+  display: none;
+}
+
 .task-slide{
   display: flex;
   flex-direction: row;
@@ -4027,6 +4031,5 @@ footer {
 }
 
 #task-div{
-  background-color: green;
+  background-color: yellow;
 }
-
