@@ -2502,7 +2502,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const connectVal = document.querySelector(".connect-val");
     const connectAix = document.querySelector(".connect-aix");
     const GreenConnect = document.querySelector(".green-connect");
-    const taskDiv = document.querySelector(".task-div");
+    const taskDiv = document.getElementById("task-div");
     const ExpDisIcon = document.querySelector(".express-currency-one");
     const ExpDisIconImg = document.querySelector(".express-from-icon");
     const ConnectValAix = document.getElementById("modal-title-convert-page");
@@ -2522,7 +2522,7 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisB.textContent = "Novaex AI";
             conDisC.textContent = "NOVA";
             conDisD.textContent = "18";
-            aBoxFees.textContent = "0.77 ETH";
+            aBoxFees.textContent = "0.64 ETH";
             ExpCurOne.textContent = "NOVA";
             ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
@@ -2600,8 +2600,3 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
-
-
-
- 
-
