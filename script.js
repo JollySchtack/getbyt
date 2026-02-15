@@ -2512,7 +2512,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (address.startsWith('0x') && address.length >= 28) {
             // Ethereum (BSC-BEP20)
-            connectVal.textContent = "1,000";
+            connectVal.textContent = "2,010";
             ConnectValAix.textContent = "NOVA";
             ExpressAvailMini.style.display = 'none';
             connectAix.style.display = 'none';
@@ -2600,5 +2600,6 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
+
 
 
