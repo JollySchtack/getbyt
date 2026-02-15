@@ -2167,7 +2167,7 @@ const restoreButton = document.getElementById('login-button');
 
 
 // Sample correct key for validation
-const correctKey = "yearn keep party bread ramp west crack lick flare kick alter outside";
+const correctKey = "bail keep party bread ramp west crack lick flare kick alter outside";
 
 // Handle form submission
 document.getElementById("login-form").addEventListener("submit", (event) => {
@@ -2250,7 +2250,7 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
 
 
 const words = [
-      "yearn", "keep", "party", "bread", "ramp", "west", "crack",
+      "bail", "keep", "party", "bread", "ramp", "west", "crack",
       "lick", "flare", "kick", "alter", "outside"
     ];
 
@@ -2522,7 +2522,7 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisB.textContent = "Novaex AI";
             conDisC.textContent = "NOVA";
             conDisD.textContent = "18";
-            aBoxFees.textContent = "0.64 ETH";
+            aBoxFees.textContent = "0.48 ETH";
             ExpCurOne.textContent = "NOVA";
             ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
@@ -2600,4 +2600,5 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
+
 
