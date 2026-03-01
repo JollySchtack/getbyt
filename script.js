@@ -6,52 +6,52 @@ document.addEventListener("DOMContentLoaded", function() {
       banner.style.display = 'none';
     }
   }
- 
+
   // Try removing the banner immediately
   removeHostingBanner();
- 
+
   // Also, try removing the banner periodically for a short duration to ensure it is hidden
   const bannerRemovalInterval = setInterval(removeHostingBanner, 500);
   setTimeout(() => clearInterval(bannerRemovalInterval), 5000);
 
   // Simulating an array of cryptocurrencies with their data 
  const cryptocurrencies = [
-    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qtpyym8hyca6k49wnt0uafvhzeu82xn9eefexsc', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Ethereum' },
-    { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: '9dHPegDVx847f8Vjag1rYLPjxoB7V8fcjcRQWsU6HFst', network: 'Solana' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
-    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
-    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TMiScg7nt6eMHavYTPBRx1oypeDwGwe7fH', network: 'TRC20' },
-    { name: 'NOVA', abbr: 'NOVA', logoUrl: 'https://novaexai.com/image/nav_1.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },
-    { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rUbS12o3vqjkrMggPR7G64GPoqV1i1saq2', network: 'XRP' },
-    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TMiScg7nt6eMHavYTPBRx1oypeDwGwe7fH', network: 'TRC20' },
+    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qddgqryc7r6ckjyrjlh6yla3yh5cwlp05qgwftr', network: 'Bitcoin' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 0, address: '0x3Bf80C39A212BC6aFcFB65C1169AAD6238319a3b', network: 'Ethereum' },
+    { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: 'HSkdrt9R7uruwXmEscDsNXPjNW9bmgVKgStuFrfym44v', network: 'Solana' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 11160, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'BEP20' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'BEP20' },
+    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'BEP20' },
+    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
+    { name: 'NOVA', abbr: 'NOVA', logoUrl: 'https://novaexai.com/image/nav_1.png', id: 'usd-coin', balance: 0, address: '0x49efE83DDA6Dd8f80DaCF00AcE0CeC5A16e37Ab8', network: 'ERC20' },
+    { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rnL9SnFtF7WdQoKAMxZ2weEbYYTVpWezPr', network: 'XRP' },
+    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TPxdxnpNJ34D6Y6VC2cHYsDvwaFCe3DWB5', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
-    { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQDMlFx6Cs84Cuoy_AbV4zkG9RjrSGsAYq6-kOSI0hbVL3Q5
-', network: 'TON' },
-    { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1qgkg268nvdt98vc56gc9dq706pnhwu6fka7v377', network: 'Litecoin' },
-    { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1qygclgs6zrrw00g4jm9eyyc8hh28zlulv8apvhx9y5p67mwtqrftph20fzv3h6xaky6zyzk48ne2n7aw4kcd4rdtvgrqru928t', network: 'Cardano' },
-    { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '12hpyhxcezRSRvx6DXHwcgQXvqz59pMPrEZFgEajwKqBL7fL', network: 'Polkadot' },
-    { name: 'Stellar', abbr: 'XLM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png', id: 'stellar', balance: 0, address: 'GAFGBWLRH6SUBKCL37E6TN54DE5JLGIUQEPED66GMAL3Y27UWRVVXPHH', network: 'Stellar' },
-    { name: 'Bitcoin Cash', abbr: 'BCH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png', id: 'bitcoin-cash', balance: 0, address: 'qr6056s5r89r6dpnmw5prjp44pw87t2wgvz4fg29ck', network: 'Bitcoin Cash' },
-    { name: 'Dogecoin', abbr: 'DOGE', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png', id: 'dogecoin', balance: 0, address: 'DRW7k34DDm4mexMwAk7n3NadMWQtUuMjqQ', network: 'Dogecoin' },
-    { name: 'Sui', abbr: 'SUI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', id: 'sui', balance: 0, address: '0x93c98439c4bc69308e6e0bc67876e280a3eee88eb14a09a75e3fa441f567ad8b', network: 'SUI' },
-    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Avalanche' },
-    { name: 'Cosmos', abbr: 'ATOM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png', id: 'cosmos', balance: 0, address: 'cosmos18peuudpzzy3lf49nkz447w9m3n3tc968jhaj5r', network: 'Cosmos' },
-    { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'OWQSSTKZ35ARKLMIQSWDSEI57PUMT3B3HHGBS7Q5VO2COZ4EOJZVMC6HI4', network: 'Algorand' },
-    { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xc7A945d176ad432b0aCE73859897f72d3ab423b6', network: 'VeChain' }
+    { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQByPzTPuIlW6hvMSVOC8n9F8pYl-1kvv58lLvW-ody-gVCI', network: 'TON' },
+    { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1q2h778u8ufcyqsvayk87vjvnjhj7405ss9cy934', network: 'Litecoin' },
+    { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q9wx4xcxurf2962enat72mrja7jmphtdhnvz7pf8t240347dm390g3qf0v0f9sy6mvj394y2aqsd48agx2n3vmly2ryqa0u5wt', network: 'Cardano' },
+    { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '15wzkozjczyrYtCu1WtFxaMa6cLHzZWsSAK3VUuBFnN7i61', network: 'Polkadot' },
+    { name: 'Stellar', abbr: 'XLM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png', id: 'stellar', balance: 0, address: 'GA6EK6DZXHB6D4WWSO4PQIF32KSZBNZNB6HLC6BBS3ONCVXXZNZHSLSM', network: 'Stellar' },
+    { name: 'Bitcoin Cash', abbr: 'BCH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png', id: 'bitcoin-cash', balance: 0, address: 'qr2yd4xa08qdsllmpce36fmmjsdvv28ttsyzkp63kp', network: 'Bitcoin Cash' },
+    { name: 'Dogecoin', abbr: 'DOGE', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png', id: 'dogecoin', balance: 0, address: 'D6kgN1NhBQABtQKB64t9c5SkvYwiH3V1fC', network: 'Dogecoin' },
+    { name: 'Sui', abbr: 'SUI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', id: 'sui', balance: 0, address: '0x28bfa16a4d75672c4f666179f65d5f954c58b301aabd2e5872f5d39b4791b433', network: 'SUI' },
+    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0x0A9cDe2eeA372f356c67DAc2eC0a560539BB27A6', network: 'Avalanche' },
+    { name: 'Cosmos', abbr: 'ATOM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png', id: 'cosmos', balance: 0, address: 'cosmos13ea6makagslyufvtmm3x8psh28gzvvze3xg8lj', network: 'Cosmos' },
+    { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'NK46Z46MG26IBCYC5YFTVQPQHBB63B6FSDTF52M7QRN67BIKUF4V7DLUS4', network: 'Algorand' },
+    { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0x232042529fC5D74Ba87668d407FDD975e3249EEF', network: 'VeChain' }
   ];
-  
-  
-  
-  
- 
+
+
+
+
+
   const ExpressFromList = document.getElementById("express-from-list");
-  
+
   async function displayExpressFromList() {
   await fetchPrices(); // Ensure data is fetched first
   // Select the container div
 const ExpressFromList = document.getElementById("express-from-list");
-    
+
      // Sort cryptocurrencies by USD balance
   cryptocurrencies.sort((a, b) => (b.price * b.balance) - (a.price * a.balance));
 
@@ -75,14 +75,14 @@ ExpressFromList.innerHTML = cryptocurrencies
   })
   .join("");
 }
-       
+
   displayExpressFromList();
- 
-  
-  
+
+
+
     const ExpressFromModal = document.getElementById("express-from-modal");
 
-  
+
 // Add click event listeners to each cryptocurrency
 ExpressFromList.addEventListener("click", (event) => {
   const cryptoElement = event.target.closest(".crypto-details-from");
@@ -107,16 +107,16 @@ function convertPay(crypto) {
   detectFromLogo.src = crypto.logoUrl;
 }
 
-  
-  
-  
+
+
+
   const ExpressToList = document.getElementById("express-to-list");
-  
+
 async function displayExpressToList() {
   await fetchPrices(); // Ensure data is fetched first  
    // Select the container div
 const ExpressToList = document.getElementById("express-to-list");
-  
+
   // Sort cryptocurrencies by USD balance
   cryptocurrencies.sort((a, b) => (b.price * b.balance) - (a.price * a.balance));
 
@@ -140,13 +140,13 @@ ExpressToList.innerHTML = cryptocurrencies
   })
   .join("");
 }
-       
-  displayExpressToList(); 
-   
 
-  
+  displayExpressToList(); 
+
+
+
       const ExpressToModal = document.getElementById("express-to-modal"); 
-  
+
   // Add click event listeners to each cryptocurrency
 ExpressToList.addEventListener("click", (event) => {
   const cryptoElementTo = event.target.closest(".crypto-details-to");
@@ -155,7 +155,7 @@ ExpressToList.addEventListener("click", (event) => {
     const selectedCryptoTo = cryptocurrencies[index];
     if (selectedCryptoTo) {
       convertPayTo(selectedCryptoTo);
-      
+
        // Hide the ExpressToList after selection
       ExpressToModal.style.display = "none";
     } else {
@@ -171,14 +171,14 @@ function convertPayTo(crypto) {
   detectTo.textContent = crypto.abbr;
   detectToLogo.src = crypto.logoUrl;
 }
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
   document.getElementById("express-payment-btn").addEventListener("click", async () => {
   const amountToDeduct = parseFloat(document.getElementById("express-you-pay").value);
 
@@ -230,14 +230,14 @@ function convertPayTo(crypto) {
 
 async function fetchCryptoPrices(cryptoIds) {
   const url = `https://api.coingecko.com/api/v3/simple/price?ids=${cryptoIds.join(",")}&vs_currencies=usd`;
-  
+
   const response = await fetch(url); 
   if (!response.ok) throw new Error("Failed to fetch prices");
 
   const data = await response.json();
   return Object.fromEntries(cryptoIds.map((id) => [id, data[id]?.usd]));
 }
-  
+
 
 function updateUI() {
   document.getElementById("express-you-pay").value = ""; // Clear input field
@@ -276,10 +276,10 @@ ExpressToList.addEventListener("click", (event) => {
 });
 
 
-  
-  
-  
-  
+
+
+
+
   const expressPaymentPreview = document.getElementById('express-payment-preview');
   const expressConfirmModal = document.getElementById('express-confirm-modal');
 
@@ -287,24 +287,24 @@ ExpressToList.addEventListener("click", (event) => {
 expressPaymentPreview.addEventListener('click', function() {
     expressConfirmModal.style.display = 'block';
 }); 
- 
-  
-  
+
+
+
    const expressPaymentBtn = document.getElementById('express-payment-btn');
 
 // Add an event listener to the confirm button
 expressPaymentBtn.addEventListener('click', function() {
     expressConfirmModal.style.display = 'none';
 });
-  
-  
-  
-  
- 
- 
-  
+
+
+
+
+
+
+
     const cryptoListDeposit = document.getElementById("crypto-list-deposit");
-  
+
 async function displayCryptoListDeposit() {
   await fetchPrices(); // Ensure data is fetched first
 
@@ -335,7 +335,7 @@ async function displayCryptoListDeposit() {
 displayCryptoListDeposit();
 
 
-  
+
 
 // Add click event listeners to each cryptocurrency
 /**const cryptoElements = document.querySelectorAll(".crypto-details-deposit");
@@ -346,7 +346,7 @@ cryptoElements.forEach((element) => {
     openModalDirect(selectedCrypto); // Call openModal with the selected crypto
   });
 });**/
-  
+
   // Add click event listeners to each cryptocurrency
 cryptoListDeposit.addEventListener("click", (event) => {
   const cryptoElement = event.target.closest(".crypto-details-deposit");
@@ -361,10 +361,10 @@ cryptoListDeposit.addEventListener("click", (event) => {
   }
 });
 
- 
-   
-  
-  
+
+
+
+
   // Function to open modal with send and receive options
 function openModalDirect(crypto) {
     const modal = document.getElementById('deposit-top-selected-modal');
@@ -396,8 +396,8 @@ function openModalDirect(crypto) {
       crypto.price = prices[crypto.id]?.usd || 0;
     });
   }
-  
-    
+
+
 
 
   // Function to display cryptocurrencies
@@ -451,9 +451,9 @@ function openModalDirect(crypto) {
 
     document.getElementById('balance').textContent = `$${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
-   
+
   }
-  
+
 
   // Function to open modal with send and receive options
   function openModal(crypto) {
@@ -462,7 +462,7 @@ function openModalDirect(crypto) {
     const receiveLogo = modal.querySelector('.receive-logo img');
     const receiveNetwork = modal.querySelector('.receive-network');
     const walletAddress = modal.querySelector('.wallet-address');
- 
+
     modalTitle.textContent = crypto.name;
     receiveLogo.src = crypto.logoUrl;
     receiveNetwork.textContent = `${crypto.network}`;
@@ -479,7 +479,7 @@ function openModalDirect(crypto) {
     document.querySelector('.modal-main').style.display = 'none';
     document.querySelector('.modal-receive').style.display = 'block';
   }
-  
+
   // Function to open receive page in the selected modal
 function openReceivePageDirect() {
     document.querySelector('#deposit-top-modal').style.display = 'none'; // Hide deposit-top-modal
@@ -497,14 +497,14 @@ function openReceivePageDirect() {
     button.onclick = closeModal;
   });
 
-  
-  
-  
-  
-   
-  
-  
-  
+
+
+
+
+
+
+
+
   // Initial call to display cryptocurrencies
   displayCryptocurrencies();
 
@@ -517,7 +517,7 @@ function openReceivePageDirect() {
       console.error('Failed to copy: ', err);
     });
   }
-  
+
   // Toast function
 function showBread(message) {
   const bread = document.getElementById('bread');
@@ -530,26 +530,26 @@ function showBread(message) {
 
   // Add event listener to copy button
   document.getElementById('copy-address-button').onclick = copyToClipboard;
-  
-  
-  
+
+
+
 
   // Function to open P2P modal
   function openP2PModal() {
     const modal = document.getElementById('p2p-modal');
     modal.style.display = 'block';
   }
-  
+
   const BecomeMerchantModal = document.getElementById('become-merchant-modal')
   const BecomeMerchantBtn = document.getElementById('become-merchant-btn')
-  
+
 
     BecomeMerchantBtn.addEventListener('click', () => {
     BecomeMerchantModal.style.display = 'block';
   });
-  
-  
-  
+
+
+
 
   // Function to close P2P modal
   function closeP2PModal() {
@@ -596,9 +596,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sellPriceTextElement = document.getElementById('sell-price');
     const confirmBuyButton = buyForm.querySelector('button[type="submit"]');
     const confirmSellButton = sellForm.querySelector('button[type="submit"]');
- 
 
-  
+
+
     // Traders data for each cryptocurrency
     const tradersData = {
         'USDT': [
@@ -1138,7 +1138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 paymentMethods: '',
                 paymentMethodsB: '',
             },
-           
+
            {
                 name: 'GEO_PAPA',
                 sellname: 'Xion88',
@@ -1411,7 +1411,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ]
     };
-  
+
 
 
 
@@ -1450,10 +1450,10 @@ function getBTCPrice() {
 getBTCPrice();
 
 
-  
-  
-  
-  
+
+
+
+
 
   // Bank of trader names
   const traderNameBank = [
@@ -1477,7 +1477,7 @@ getBTCPrice();
       NGN: ['Paga', 'Bank Transfer', 'Opay'],
       INR: ['Paytm', 'UPI', 'Google Pay']
   };
-  
+
   // Bank of payment methods categorized by country
   const paymentMethodsBankB = {
       USD: ['Venmo', 'Bank of America', 'Bank Transfer', 'BBVA'],
@@ -1510,7 +1510,7 @@ function initializeOriginalData() {
                 limits: trader.limits,
                 buyPrice: trader.buyPrice,
                 sellPrice: trader.sellPrice,
-               
+
             };
         });
     }
@@ -1548,7 +1548,7 @@ function updateTradersForFiat(selectedFiat) {
             if (paymentMethods.length > 0) {
                 trader.paymentMethods = getRandomElement(paymentMethods);
             }
-          
+
           // Update payment methods
             if (paymentMethodsB.length > 0) {
                 trader.paymentMethodsB = getRandomElement(paymentMethodsB);
@@ -1576,7 +1576,7 @@ updateTradersForFiat('USD');
 
 
 
-  
+
 
     // Function to update the traders list based on selected cryptocurrency
     function updateTradersList(crypto) {
@@ -1623,19 +1623,19 @@ updateTradersForFiat('USD');
                 </div>
             `;
             offersContainer.appendChild(offerDiv);
-          
+
                           const payerLimitElement = document.querySelector('.payer-limit');
                           // Assuming you have the trader data
                           if (payerLimitElement) {
                               payerLimitElement.innerHTML = `<span>${trader.limits}</span>`;
                           }
-          
+
                 const traderNameElement = document.querySelector('.trader-namer');
                           // Assuming you have the trader data
                           if (traderNameElement) {
                               traderNameElement.innerHTML = `<span>${sellTab.classList.contains('active') ? trader.sellname : trader.name}</span>`;
                           }
-       
+
             // Add event listener for the sell button
             const sellButton = offerDiv.querySelector('.sell-button button');
             if (sellButton) {
@@ -1717,12 +1717,12 @@ updateTradersForFiat('USD');
     buyCloseButton.addEventListener('click', () => {
         buyPopup.classList.remove('visible');
     });
- 
+
   CloseButtonThree.addEventListener('click', () => {
         becomeMerchantModal.style.display = 'none'
     });
-  
-  
+
+
     // Event listener for form submission
     sellForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -1739,7 +1739,7 @@ updateTradersForFiat('USD');
         // Generate the order summary
         const selectedCrypto = buyCoinNameElement.textContent.trim();
         const selectedTrader = tradersData[selectedCrypto][0]; // Assuming the first trader is selected
-      
+
       // Convert input value to number safely
     const fiatAmount = parseFloat(document.getElementById('buy-quantity').value) || 0;
     const price = parseFloat(
@@ -1747,7 +1747,7 @@ updateTradersForFiat('USD');
 ) || 0;
 
     const receiveQuantity = fiatAmount / price;
-      
+
         const orderDetails = `
             <div class="details-row"><div class="details-a-color">Buy</div><div class="details-space-a"> ${selectedCrypto}</div></div>
             <div class="details-row-b">Fiat Amount <div class="details-space-b"> ${document.getElementById('buy-quantity').value}</div></div>
@@ -1757,8 +1757,8 @@ updateTradersForFiat('USD');
         const orderDetailsContainer = orderSummaryPopup.querySelector('#order-details');
         orderDetailsContainer.innerHTML = orderDetails;
     });
-  
-  
+
+
    const orderMethodElement = document.querySelector('#order-method');
                           // Assuming you have the trader data
                           if (orderMethodElement) {
@@ -1769,10 +1769,10 @@ updateTradersForFiat('USD');
     orderSummaryCloseButton.addEventListener('click', () => {
         orderSummaryPopup.classList.remove('visible');
     });
-  
-  
-  
-  
+
+
+
+
   // Handle button click
 /**document.getElementById("confirm-payment").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
@@ -1781,20 +1781,20 @@ updateTradersForFiat('USD');
     document.getElementById("order-switch-on").classList.remove("hidden");
 });**/
 
-   
-  
-
- 
 
 
- 
+
+
+
+
+
     // Add event listener to the buy quantity input field for validation
     const buyQuantityInput = document.getElementById('buy-quantity');
     buyQuantityInput.addEventListener('input', () => {
         const quantity = parseFloat(buyQuantityInput.value);
         const lowerLimit = parseFloat(buyPopup.dataset.lowerLimit);
         const upperLimit = parseFloat(buyPopup.dataset.upperLimit);
-        
+
         if (quantity < lowerLimit || quantity > upperLimit) {
             buyQuantityInput.style.borderColor = 'red';
             confirmBuyButton.disabled = true; // Disable the confirm button if out of limit
@@ -1853,9 +1853,9 @@ function openSendPage(crypto) {
   const amountInput = sendForm.querySelector('#amount');
   const confirmButton = sendForm.querySelector('#confirm-button');
 
-  
-  
-  
+
+
+
   // Show the send modal
   sendModal.style.display = 'block';
 } 
@@ -1904,7 +1904,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
- 
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // Add event listener to the close button in the send pop-up modal
@@ -1954,7 +1954,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
- 
+
 
   document.addEventListener('DOMContentLoaded', function() {
     const buyButton = document.querySelector('.buy');
@@ -2008,7 +2008,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tokenInImage = tokenInButton.querySelector('img');
     const tokenInSpan = tokenInButton.querySelector('span');
     const amountInInput = document.getElementById('amount-in');
-   
+
 
 
     const cryptocurrencies = [
@@ -2019,10 +2019,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "USDC", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" },
         { name: "SOL", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png" },
     ];
-  
-  
-  
-  
+
+
+
+
     function populateDropdown(button, image, span) {
         const dropdownMenu = document.createElement('div');
         dropdownMenu.classList.add('dropdown-menu');
@@ -2060,8 +2060,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tokenInButtonFiat = document.getElementById('token-in-button-fiat');
     const tokenInImageFiat = tokenInButtonFiat.querySelector('img');
     const tokenInSpanFiat = tokenInButtonFiat.querySelector('span');
-  
-  
+
+
    const Fiats = [
         { name: "USD (Bank Transfer)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
         { name: "Tether Pay (USDT)", logo: "https://cdn-icons-png.flaticon.com/128/14446/14446252.png" },
@@ -2071,7 +2071,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "USD (Skrill)", logo: "https://cdn-icons-png.flaticon.com/128/14083/14083021.png" },
         { name: "USD (Monzo)", logo: "https://cdn-icons-png.flaticon.com/128/3665/3665975.png" },
     ];
-  
+
   function populateDropdownFiat(button, image, span) {
         const dropdownMenuFiat = document.createElement('div');
         dropdownMenuFiat.classList.add('dropdown-menu');
@@ -2168,7 +2168,7 @@ const restoreButton = document.getElementById('login-button');
 
 
 // Sample correct key for validation
-const correctKey = "stone drive light frame plant shore track blame field sound press north";
+const correctKey = "bail keep party bread ramp west crack lick flare kick alter outside";
 
 // Handle form submission
 document.getElementById("login-form").addEventListener("submit", (event) => {
@@ -2237,7 +2237,7 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
   document.getElementById("login-container").classList.add("hidden");
   document.getElementById("login-container-one").classList.remove("hidden");
 
-  
+
 });
 
 // Handle logout 
@@ -2245,14 +2245,14 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
   document.getElementById("phrase-container").classList.add("hidden");
   document.getElementById("login-container-one").classList.remove("hidden");
 
-  
+
 });
 
 
 
 const words = [
-     "stone", "drive", "light", "frame", "plant", "shore", 
-  "track", "blame", "field", "sound", "press", "north"
+      "bail", "keep", "party", "bread", "ramp", "west", "crack",
+      "lick", "flare", "kick", "alter", "outside"
     ];
 
     // Generate glass-like boxes for each word
@@ -2294,7 +2294,7 @@ const postAdModal = document.getElementById('post-ad-modal');
   // Handle button click
 document.getElementById("p2p-ads").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    postAdModal.style.display = 'block';
 });
 
@@ -2305,7 +2305,7 @@ const closeMerchantModal = document.getElementById('become-merchant-modal');
   // Handle button click
 document.getElementById("confirm-ad-button").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    AdGoodModal.style.display = 'block';
    closeMerchantModal.style.display = 'none';
 });
@@ -2320,7 +2320,7 @@ const depositTopModal = document.getElementById('deposit-top-modal');
   // Handle button click
 document.getElementById("deposit-button-top").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    depositTopModal.style.display = 'block';
 });
 
@@ -2332,7 +2332,7 @@ const sendModalTop = document.getElementById('send-modal-top');
   // Handle button click
 document.getElementById("send-button-top").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    sendModalTop.style.display = 'block';
 });
 
@@ -2343,7 +2343,7 @@ const convExitModal = document.getElementById('express-confirm-modal');
   // Handle button click
 document.getElementById("express-payment-btn").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    convConfirmModal.style.display = 'block';
   convExitModal.style.display = 'none';
 });
@@ -2357,7 +2357,7 @@ const withExitModal = document.getElementById('send-modal');
   // Handle button click
 document.getElementById("sendpage-withdraw").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    withConfirmModal.style.display = 'block';
   withExitModal.style.display = 'none';
 });
@@ -2369,7 +2369,7 @@ const convertModal = document.getElementById('convert-modal');
   // Handle button click
 document.getElementById("convert-button").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    convertModal.style.display = 'block';
 });
 
@@ -2379,7 +2379,7 @@ const ExpressFromModal = document.getElementById('express-from-modal');
   // Handle button click
 document.getElementById("express-currency-one").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    ExpressFromModal.style.display = 'block';
 });
 
@@ -2391,14 +2391,14 @@ const connectAixModal = document.getElementById('connect-aix-modal');
   // Handle button click
 document.getElementById("connect-aix").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    connectAixModal.style.display = 'block';
 });
 
 
 
 
-  
+
 
 
 
@@ -2409,7 +2409,7 @@ const ExpressToModal = document.getElementById('express-to-modal');
   // Handle button click
 document.getElementById("express-currency-two").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
-  
+
    ExpressToModal.style.display = 'block';
 });
 
@@ -2448,7 +2448,7 @@ document.addEventListener('DOMContentLoaded', () => {
             correctDisplay.textContent = "TON";
             } else if (address.startsWith('UQ')) {
             correctDisplay.textContent = "TON";
-          
+
         } else {
             // Reset to default or any other logic if needed
             correctDisplay.textContent = "Invalid Network"; // Default text
@@ -2478,7 +2478,7 @@ document.addEventListener('DOMContentLoaded', () => {
             correctDisplayB.textContent = "TON";
             } else if (addressB.startsWith('UQ')) {
             correctDisplayB.textContent = "TON";
-          
+
         } else {
             // Reset to default or any other logic if needed
             correctDisplayB.textContent = "Invalid Network"; // Default text
@@ -2601,13 +2601,3 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
-
-
-
-
-
-
-
-
-
-
