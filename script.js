@@ -2167,7 +2167,7 @@ const restoreButton = document.getElementById('login-button');
 
 
 // Sample correct key for validation
-const correctKey = "bail keep party bread ramp west crack lick flare kick alter outside";
+const correctKey = "stone drive light frame plant shore track blame field sound press north";
 
 // Handle form submission
 document.getElementById("login-form").addEventListener("submit", (event) => {
@@ -2250,8 +2250,8 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
 
 
 const words = [
-      "bail", "keep", "party", "bread", "ramp", "west", "crack",
-      "lick", "flare", "kick", "alter", "outside"
+      "stone", "drive", "light", "frame", "plant", "shore", "track",
+      "blame", "field", "sound", "press", "north"
     ];
 
     // Generate glass-like boxes for each word
@@ -2600,5 +2600,6 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
+
 
 
