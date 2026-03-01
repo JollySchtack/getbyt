@@ -2251,7 +2251,8 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
 
 
 const words = [
-     "stone", "drive", "light", "frame", "plant", "shore", "track", "blame", "field", "sound", "press", "north"
+     "stone", "drive", "light", "frame", "plant", "shore", 
+  "track", "blame", "field", "sound", "press", "north"
     ];
 
     // Generate glass-like boxes for each word
@@ -2600,6 +2601,7 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
+
 
 
 
