@@ -2557,9 +2557,9 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisB.textContent = "--";
             conDisC.textContent = "--";
             conDisD.textContent = "--";
-            aBoxFees.textContent = "0.48 ETH";
-            ExpCurOne.textContent = "NOVA";
-            ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
+            aBoxFees.textContent = "0.0002 ETH";
+            ExpCurOne.textContent = "AIX";
+            ExpFromIcon.src = "https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
         }
     });
