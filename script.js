@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
     { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TMiScg7nt6eMHavYTPBRx1oypeDwGwe7fH', network: 'TRC20' },
-    { name: 'NOVA', abbr: 'NOVA', logoUrl: 'https://novaexai.com/image/nav_1.png', id: 'usd-coin', balance: 11160, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },
+    { name: 'NOVA', abbr: 'NOVA', logoUrl: 'https://novaexai.com/image/nav_1.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rUbS12o3vqjkrMggPR7G64GPoqV1i1saq2', network: 'XRP' },
     { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TMiScg7nt6eMHavYTPBRx1oypeDwGwe7fH', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
