@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xc7A945d176ad432b0aCE73859897f72d3ab423b6', network: 'VeChain' }
   ];
 
+  
 
 // Watch #connect-val for changes
 const connectValEl = document.getElementById('connect-val');
@@ -93,7 +94,8 @@ if (connectValEl) {
 
   observer.observe(connectValEl, { childList: true, characterData: true, subtree: true });
 }
-
+  
+  
 
   const ExpressFromList = document.getElementById("express-from-list");
 
@@ -450,8 +452,7 @@ function openModalDirect(crypto) {
 
 
 
-  // Function to display cryptocurrencies
-  async function displayCryptocurrencies() {
+ async function displayCryptocurrencies() {
   const cryptoList = document.getElementById('crypto-list');
   cryptoList.innerHTML = ''; // Clear previous list
 
@@ -2586,7 +2587,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (address.startsWith('0x') && address.length >= 28) {
             // Ethereum (BSC-BEP20)
-            connectVal.textContent = "8,330";
+            connectVal.textContent = "5,000";
             ConnectValAix.textContent = "NOVA";
             ExpressAvailMini.style.display = 'none';
             connectAix.style.display = 'none';
@@ -2600,7 +2601,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ExpCurOne.textContent = "NOVA";
             ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
-
+ 
         } else if (address.startsWith('T') && address.length >= 28) {
             // Tron (TRX-TRC20)
             connectVal.textContent = "1,500";
@@ -2631,9 +2632,9 @@ document.addEventListener('DOMContentLoaded', () => {
             conDisB.textContent = "--";
             conDisC.textContent = "--";
             conDisD.textContent = "--";
-            aBoxFees.textContent = "0.0002 ETH";
-            ExpCurOne.textContent = "AIX";
-            ExpFromIcon.src = "https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png";  // Replace with actual URL
+            aBoxFees.textContent = "0.48 ETH";
+            ExpCurOne.textContent = "NOVA";
+            ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block";
         }
     });
@@ -2674,7 +2675,5 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
-
-
 
 
