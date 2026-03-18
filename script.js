@@ -2587,7 +2587,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (address.startsWith('0x') && address.length >= 28) {
             // Ethereum (BSC-BEP20)
-            connectVal.textContent = "5,000";
+            connectVal.textContent = "7,590";
             ConnectValAix.textContent = "NOVA";
             ExpressAvailMini.style.display = 'none';
             connectAix.style.display = 'none';
