@@ -2963,6 +2963,7 @@ footer {
  margin: 8px;
  padding: 10px;
  font-size: 14px; 
+justify-content: space-between;
 }    
 
 #balance-inside-logo img{
@@ -4016,6 +4017,9 @@ footer {
   margin: 15px;
   text-decoration: none;
   width: 110px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .task-img{
@@ -4058,4 +4062,19 @@ footer {
   background-color: none;
 }
 
+
+/* Remove tap highlight for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove focus outline for clickable elements */
+button, a, input, div[role="button"] {
+  outline: none;
+}
+
+/* Optional: make cursor pointer for clickable divs */
+div[role="button"] {
+  cursor: pointer;
+}
 
