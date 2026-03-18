@@ -427,7 +427,7 @@ textarea.invalid {
   justify-content: space-between;
   padding: 10px;
   border-radius: 0.5rem;
-  background-color: #f3f4f6; /* light gray */
+  background-color: rgba(50, 50, 50, 0.4); /* light gray */
   margin-bottom: 8px;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
