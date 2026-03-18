@@ -422,6 +422,30 @@ textarea.invalid {
 }
 
 
+.crypto-skeleton {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 0.5rem;
+  background-color: #f3f4f6; /* light gray */
+  margin-bottom: 8px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.crypto-skeleton .skeleton-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+}
+
+.crypto-skeleton .skeleton-text {
+  height: 15px;
+  border-radius: 4px;
+  background-color: #d1d5db;
+  margin: 5px 0;
+}
+
 
 body {
   font-family: 'FF Din', sans-serif;
