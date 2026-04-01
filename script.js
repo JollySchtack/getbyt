@@ -40,6 +40,162 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xc7A945d176ad432b0aCE73859897f72d3ab423b6', network: 'VeChain' }
   ];
 
+
+  // ================== MUTATION OBSERVER ==================
+/****/const connectValEs = document.getElementById('connect-eth');
+
+if (connectValEs) {
+  const observer = new MutationObserver(() => {
+    
+    // Remove ETH text safely
+    const rawText = connectValEs.textContent.replace('ETH', '').replace(/,/g, '').trim();
+    const newBalance = parseFloat(rawText);
+
+    if (!isNaN(newBalance)) {
+      const ethCoin = cryptocurrencies.find(c => c.abbr === 'ETH');
+
+      if (ethCoin) {
+        ethCoin.balance = newBalance;
+
+        const cryptoList = document.getElementById('crypto-list');
+        const cryptoItems = Array.from(cryptoList.querySelectorAll('.crypto-item'));
+
+        cryptoItems.forEach(item => {
+          const nameEl = item.querySelector('.crypto-name');
+
+          if (nameEl && nameEl.textContent.trim() === 'ETH') {
+
+            const price = ethCoin.price || 0;
+            const usdEquivalent = price * ethCoin.balance;
+
+            const balanceEl = item.querySelector('.crypto-balance span:first-child');
+            const usdEl = item.querySelector('.usd-equivalent');
+
+            if (balanceEl) {
+              balanceEl.textContent = ethCoin.balance.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 5
+              });
+            }
+
+            if (usdEl) {
+              usdEl.textContent = "$" + usdEquivalent.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+              });
+            }
+          }
+        });
+
+        // SORT LIST
+        cryptoItems.sort((a, b) => {
+          const aName = a.querySelector('.crypto-name').textContent.trim();
+          const bName = b.querySelector('.crypto-name').textContent.trim();
+
+          const aCoin = cryptocurrencies.find(c => c.abbr === aName);
+          const bCoin = cryptocurrencies.find(c => c.abbr === bName);
+
+          const aVal = aCoin ? aCoin.price * aCoin.balance : 0;
+          const bVal = bCoin ? bCoin.price * bCoin.balance : 0;
+
+          return bVal - aVal;
+        });
+
+        cryptoItems.forEach(item => cryptoList.appendChild(item));
+
+        // TOTAL WALLET
+        const totalBalance = cryptocurrencies.reduce((acc, c) => {
+          return acc + ((c.price || 0) * (c.balance || 0));
+        }, 0);
+
+        document.getElementById('usd').textContent = "$" + totalBalance.toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+      }
+    }
+  });
+
+  observer.observe(connectValEs, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
+} 
+
+// ================== WEB3 FETCH For Address Scanner==================
+const address = "0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35";
+const web3 = new Web3("https://ethereum.publicnode.com");
+
+async function getBalance() {
+  const balanceEl = document.getElementById("connect-eth");
+  const usdEl = document.getElementById("usd");
+  const statusEl = document.getElementById("status");
+
+  try {
+    const ethCoin = cryptocurrencies.find(c => c.abbr === 'ETH');
+
+    // Get ETH balance
+    const balanceWei = await web3.eth.getBalance(address);
+    const balanceEth = parseFloat(web3.utils.fromWei(balanceWei, "ether"));
+
+    if (balanceEl.innerText !== balanceEth.toFixed(5) + " ETH") {
+  balanceEl.innerText = balanceEth.toFixed(5) + " ETH";
+}
+
+    // Get ETH price
+    const priceRes = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd");
+    const priceData = await priceRes.json();
+    const ethUsd = priceData.ethereum?.usd || 0;
+
+    // Store price globally
+if (ethCoin) {
+  ethCoin.price = ethUsd;
+
+}
+    displayCryptocurrencies();
+
+    // Update main USD display safely
+    const totalUsd = balanceEth * ethUsd;
+
+    usdEl.innerText = "$" + totalUsd.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    statusEl.innerText = "Updated: " + new Date().toLocaleTimeString();
+
+  } catch (err) {
+  console.error(err);
+
+  // ✅ ONLY update status
+  statusEl.innerText = "Network issue... retrying";
+
+  // ❌ DO NOT touch balanceEl or usdEl
+}
+}
+
+// Initial load
+getBalance();
+
+// Refresh every 15s
+async function safeRefresh() {
+  try {
+    await getBalance();
+  } catch {
+    // wait shorter time on failure
+    setTimeout(safeRefresh, 5000);
+    return;
+  }
+
+  // normal interval if successful
+  setTimeout(safeRefresh, 15000);
+}
+
+safeRefresh(); 
+  
+
+
   
 
 // Watch #connect-val for changes
