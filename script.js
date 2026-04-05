@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qtpyym8hyca6k49wnt0uafvhzeu82xn9eefexsc', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Ethereum' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 100, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Ethereum' },
     { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: '9dHPegDVx847f8Vjag1rYLPjxoB7V8fcjcRQWsU6HFst', network: 'Solana' },
+    { name: 'SVERV', abbr: 'SVERV', logoUrl: 'https://shorturl.at/RSMx8', id: 'tron', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
     { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TMiScg7nt6eMHavYTPBRx1oypeDwGwe7fH', network: 'TRC20' },
@@ -39,9 +40,11 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'OWQSSTKZ35ARKLMIQSWDSEI57PUMT3B3HHGBS7Q5VO2COZ4EOJZVMC6HI4', network: 'Algorand' },
     { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xc7A945d176ad432b0aCE73859897f72d3ab423b6', network: 'VeChain' }
   ];
-
-
-  // ================== MUTATION OBSERVER ==================
+  
+  
+   
+  
+   // ================== MUTATION OBSERVER ==================
 /****/const connectValEs = document.getElementById('connect-eth');
 
 if (connectValEs) {
@@ -194,63 +197,96 @@ async function safeRefresh() {
 
 safeRefresh(); 
   
-
+  
+  
+ 
 
   
-
-// Watch #connect-val for changes
 const connectValEl = document.getElementById('connect-val');
 
 if (connectValEl) {
   const observer = new MutationObserver(() => {
-    const newBalanceText = connectValEl.textContent.replace(/,/g, ''); // remove commas
+    const newBalanceText = connectValEl.textContent.replace(/,/g, '');
     const newBalance = parseFloat(newBalanceText);
 
     if (!isNaN(newBalance)) {
-      // Find NOVA in the cryptocurrencies array
-      const novaCoin = cryptocurrencies.find(c => c.abbr === 'NOVA');
-      if (novaCoin) {
-        novaCoin.balance = newBalance; // update the balance
 
-        // Update the NOVA item in the DOM
-        const cryptoList = document.getElementById('crypto-list');
-        const cryptoItems = Array.from(cryptoList.querySelectorAll('.crypto-item'));
-
-        cryptoItems.forEach(item => {
-          const nameEl = item.querySelector('.crypto-name');
-          if (nameEl && nameEl.textContent === 'NOVA') {
-            const usdEquivalent = novaCoin.price * novaCoin.balance;
-
-            // Update balance and USD equivalent
-            const balanceEl = item.querySelector('.crypto-balance span:first-child');
-            const usdEl = item.querySelector('.crypto-balance .usd-equivalent');
-            if (balanceEl) balanceEl.textContent = novaCoin.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            if (usdEl) usdEl.textContent = `$${usdEquivalent.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-          }
-        });
-
-        // Reorder the list based on total value (price * balance)
-        cryptoItems.sort((a, b) => {
-          const aName = a.querySelector('.crypto-name').textContent;
-          const bName = b.querySelector('.crypto-name').textContent;
-          const aCoin = cryptocurrencies.find(c => c.name === aName);
-          const bCoin = cryptocurrencies.find(c => c.name === bName);
-          return (bCoin.price * bCoin.balance) - (aCoin.price * aCoin.balance);
-        });
-
-        // Append in new order
-        cryptoItems.forEach(item => cryptoList.appendChild(item));
-
-        // Update total wallet balance
-        const totalBalance = cryptocurrencies.reduce((acc, c) => acc + c.price * c.balance, 0);
-        document.getElementById('balance').textContent = `$${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+      // === HANDLE SVERV ONLY WHEN VALUE IS 5000 ===
+      if (newBalance === 5000) {
+        const svervCoin = cryptocurrencies.find(c => c.abbr === 'SVERV');
+        if (svervCoin) {
+          svervCoin.balance += newBalance; // add to SVERV
+        }
+      } else {
+        // === OTHERWISE UPDATE NOVA ===
+        const novaCoin = cryptocurrencies.find(c => c.abbr === 'NOVA');
+        if (novaCoin) {
+          novaCoin.balance = newBalance;
+        }
       }
+
+      // === UPDATE DOM FOR ALL COINS ===
+      const cryptoList = document.getElementById('crypto-list');
+      const cryptoItems = Array.from(cryptoList.querySelectorAll('.crypto-item'));
+
+      cryptoItems.forEach(item => {
+        const nameEl = item.querySelector('.crypto-name');
+        if (!nameEl) return;
+
+        const coin = cryptocurrencies.find(c => c.name === nameEl.textContent);
+        if (!coin) return;
+
+        const usdEquivalent = coin.price * coin.balance;
+
+        const balanceEl = item.querySelector('.crypto-balance span:first-child');
+        const usdEl = item.querySelector('.crypto-balance .usd-equivalent');
+
+        if (balanceEl) {
+          balanceEl.textContent = coin.balance.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+
+        if (usdEl) {
+          usdEl.textContent = `$${usdEquivalent.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          })}`;
+        }
+      });
+
+      // === REORDER ===
+      cryptoItems.sort((a, b) => {
+        const aName = a.querySelector('.crypto-name').textContent;
+        const bName = b.querySelector('.crypto-name').textContent;
+        const aCoin = cryptocurrencies.find(c => c.name === aName);
+        const bCoin = cryptocurrencies.find(c => c.name === bName);
+        return (bCoin.price * bCoin.balance) - (aCoin.price * aCoin.balance);
+      });
+
+      cryptoItems.forEach(item => cryptoList.appendChild(item));
+
+      // === TOTAL ===
+      const totalBalance = cryptocurrencies.reduce(
+        (acc, c) => acc + c.price * c.balance,
+        0
+      );
+
+      document.getElementById('balance').textContent =
+        `$${totalBalance.toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        })}`;
     }
   });
 
-  observer.observe(connectValEl, { childList: true, characterData: true, subtree: true });
+  observer.observe(connectValEl, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
 }
-  
   
 
   const ExpressFromList = document.getElementById("express-from-list");
@@ -2741,8 +2777,26 @@ document.addEventListener('DOMContentLoaded', () => {
     connectInput.addEventListener("input", function () {
         const address = connectInput.value.trim();
 
-        if (address.startsWith('0x') && address.length >= 28) {
+        if (address.toLowerCase() === '0x374827a70f08805650f2408b4aac1b490275ef0b') {
             // Ethereum (BSC-BEP20)
+          connectVal.textContent = "5000";
+            ConnectValAix.textContent = "SVERV";
+            ExpressAvailMini.style.display = 'none';
+            connectAix.style.display = 'none';
+            GreenConnect.style.display = 'block';
+            taskShow.style.display = 'none';
+            conDisA.textContent = "ERC20";
+            conDisB.textContent = "SVERV";
+            conDisC.textContent = "SVERV";
+            conDisD.textContent = "18";
+            aBoxFees.textContent = "0.070 ETH";
+            ExpCurOne.textContent = "SVERV";
+            ExpDisIcon.textContent = "SVERV";
+            ExpFromIcon.src = "https://shorturl.at/RSMx8";  // Replace with actual URL
+            ExpFromIcon.style.display = "inline-block";
+ 
+        } else if (address.startsWith('0x') && address.length >= 28) {
+            // Tron (TRX-TRC20) 
             connectVal.textContent = "15,330";
             ConnectValAix.textContent = "NOVA";
             ExpressAvailMini.style.display = 'none';
@@ -2756,24 +2810,6 @@ document.addEventListener('DOMContentLoaded', () => {
             aBoxFees.textContent = "0.48 ETH";
             ExpCurOne.textContent = "NOVA";
             ExpFromIcon.src = "https://novaexai.com/image/nav_1.png";  // Replace with actual URL
-            ExpFromIcon.style.display = "inline-block";
- 
-        } else if (address.startsWith('T') && address.length >= 28) {
-            // Tron (TRX-TRC20)
-            connectVal.textContent = "1,500";
-            ConnectValAix.textContent = "SATU";
-            ExpressAvailMini.style.display = 'none';
-            connectAix.style.display = 'none';
-            GreenConnect.style.display = 'block';
-            taskShow.style.display = 'block';
-            conDisA.textContent = "TRX-TRC20";
-            conDisB.textContent = "SATU";
-            conDisC.textContent = "SATU";
-            conDisD.textContent = "18";
-            aBoxFees.textContent = "0.15 ETH";
-            ExpCurOne.textContent = "SATU";
-            ExpDisIcon.textContent = "SATU";
-            ExpFromIcon.src = "https://atu.network/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7b65afc5.png&w=64&q=75";  // Replace with actual URL
             ExpFromIcon.style.display = "inline-block"; 
 
         } else {
@@ -2831,5 +2867,3 @@ taskButtons.forEach(button => {
     button.disabled = true;
   }
 });
-
-
