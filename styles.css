@@ -2360,6 +2360,13 @@ footer {
   right: calc(100% - 110px);
 }
 
+
+.binance-icon-verified{
+  width: 25px;
+  position: absolute;
+  right: calc(100% - 140px);
+}
+
 .binance-icon-phrase{
   width: 90px;
   position: absolute;
@@ -2955,6 +2962,7 @@ footer {
   display: flex;
   flex-direction: row;
   max-width: 100%;
+  justify-content: space-between;
 } 
 
 .spot-trading-box{
@@ -2962,8 +2970,7 @@ footer {
  border-radius: 10px;
  margin: 8px;
  padding: 10px;
- font-size: 14px; 
-justify-content: space-between;
+ font-size: 14px;
 }    
 
 #balance-inside-logo img{
@@ -3385,6 +3392,7 @@ justify-content: space-between;
   margin-left: 8%;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 25px;
 }
 
 .not-icon-b{
@@ -4077,4 +4085,3 @@ button, a, input, div[role="button"] {
 div[role="button"] {
   cursor: pointer;
 }
-
