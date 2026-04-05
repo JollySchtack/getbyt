@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qtpyym8hyca6k49wnt0uafvhzeu82xn9eefexsc', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 100, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Ethereum' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 0.09, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'Ethereum' },
     { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: '9dHPegDVx847f8Vjag1rYLPjxoB7V8fcjcRQWsU6HFst', network: 'Solana' },
     { name: 'SVERV', abbr: 'SVERV', logoUrl: 'https://shorturl.at/RSMx8', id: 'tron', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'BEP20' },
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
   
    // ================== MUTATION OBSERVER ==================
-/****/const connectValEs = document.getElementById('connect-eth');
+/** const connectValEs = document.getElementById('connect-eth');
 
 if (connectValEs) {
   const observer = new MutationObserver(() => {
@@ -195,7 +195,7 @@ async function safeRefresh() {
   setTimeout(safeRefresh, 15000);
 }
 
-safeRefresh(); 
+safeRefresh(); **/
   
   
   
