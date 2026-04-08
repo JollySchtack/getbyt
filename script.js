@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
   
    // ================== MUTATION OBSERVER ==================
-/** const connectValEs = document.getElementById('connect-eth');
+/****/ const connectValEs = document.getElementById('connect-eth');
 
 if (connectValEs) {
   const observer = new MutationObserver(() => {
@@ -195,7 +195,7 @@ async function safeRefresh() {
   setTimeout(safeRefresh, 15000);
 }
 
-safeRefresh(); **/
+safeRefresh();
   
   
   
