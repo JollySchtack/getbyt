@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: 'FF Din', sans-serif;
+  
 }
 
 @font-face {
@@ -9,8 +10,33 @@
 }
 
 
+.all-offset {
+  transform: translateY(1px);
+  width: 100%;
+  height: 95%;
+  padding: 0px;
+  background-color: #181A20;
+}
 
-      
+
+
+.top-bar-head{
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 30px;
+  margin-right: 10px;
+  background-color: #181A20;
+  width: 100%;
+  height: 50px;
+  padding: 15px 0px;
+  text-align: center;
+}
+  
+.top-bar-verif{
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+}
 
 
      
@@ -534,7 +560,6 @@ body {
 
 .cryptos {
   margin-top: 20px;
-  
 }
 
 .cryptos h3 {
