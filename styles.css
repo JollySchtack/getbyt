@@ -449,7 +449,7 @@ textarea.invalid {
 
 
 .int-con-error {
-  width: 90%; /* equivalent to w-14 */
+  width: 95%; /* equivalent to w-14 */
   height: 15px; /* equivalent to h-14 */
   font-size: 14px;
   text-align: center;
