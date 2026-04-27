@@ -9,21 +9,29 @@
   <script src="https://telegram.org/js/telegram-web-app.js">
   </script> <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>   
   <script> 
-  window.addEventListener("DOMContentLoaded", function () {
+ window.addEventListener("DOMContentLoaded", function () {
     const tg = window.Telegram.WebApp;
 
     tg.ready();
 
-    // Set header background color only
+    if (tg.isVersionAtLeast("8.0")) {
+      tg.requestFullscreen();
+    } else {
+      tg.expand();
+    }
+
     tg.setHeaderColor("#181A20");
   });
 </script>
   
  </head>  
+  
+  
 <body>
   <!--    { name: 'SVERV', abbr: 'SVERV', logoUrl: 'https://shorturl.at/RSMx8', id: 'usd-coin', balance: 0, address: '0xb0B61e915d54BC5bf570ac5340Cd308928CE1D35', network: 'ERC20' },-->
-  
-  
+  <div class="top-bar-head">Bitget Web3&nbsp<img src="https://cdn-icons-png.flaticon.com/128/7641/7641727.png" alt="BTC" class="top-bar-verif"></div>
+    
+  <div class="all-offset">
   
   <div class="card" hidden>  
   <h1>Wallet Balance</h1>
@@ -32,6 +40,9 @@
   <div class="status" id="status">Connecting...</div>
 </div>
   
+  
+      
+
   
   
     <div id="login-container-one" class="login-container-one"> 
@@ -1557,8 +1568,10 @@ setInterval(fetchPiPrice, 120000);
    
      
  </div>
+   
+ </div>
+    
     <script src="script.js"></script>
    
-  
 </body>
 </html>
