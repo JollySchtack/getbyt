@@ -498,7 +498,7 @@ body {
 
 .home-page{
   width: 100%;
-  overflow-y: auto;
+  
 }
 
 
@@ -561,6 +561,8 @@ body {
 
 .cryptos {
   margin-top: 20px;
+  height: 450px;
+  overflow-y: auto;
 }
 
 .cryptos h3 {
