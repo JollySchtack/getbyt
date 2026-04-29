@@ -18,8 +18,6 @@
   background-color: #181A20;
 }
 
-
-
 .top-bar-head{
   font-size: 20px;
   font-weight: bold;
@@ -27,7 +25,9 @@
   width: 100%;
   padding: 15px 0px;
   padding-top: 50px;
+  padding-bottom: 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
 }
   
 .top-bar-verif{
@@ -1462,7 +1462,7 @@ close-button-three:hover,
 
 .p2p-adapt-board{
   position: fixed;
-  bottom: 0px;
+  bottom: 20px;
   left: 0px;
   display: flex;
   flex-direction: row;
