@@ -2579,6 +2579,20 @@ document.getElementById("confirm-ad-button").addEventListener("click", (event) =
 
 
 
+const AdGoodModalConP = document.getElementById('ad-good-modal-confirm-p');
+const closeExpModal = document.getElementById('express-confirm-modal');
+
+  // Handle button click
+document.getElementById("fake-express").addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default button behavior if it's within a form
+
+   AdGoodModalConP.style.display = 'block';
+   closeExpModal.style.display = 'none';
+});
+
+
+
+
 
 
 const depositTopModal = document.getElementById('deposit-top-modal');
